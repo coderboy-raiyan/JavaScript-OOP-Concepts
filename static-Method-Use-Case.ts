@@ -16,7 +16,7 @@ class ProductApi {
   static async request<TData = {}>(
     endpoint: string,
     data?: TData,
-    method: string | undefined = "GET",
+    method: string = "GET",
     token?: string
   ): Promise<TData[]> {
     const url = new URL(`${BASE_URL}/${endpoint}`);
