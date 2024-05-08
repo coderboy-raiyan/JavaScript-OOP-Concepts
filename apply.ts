@@ -10,5 +10,7 @@ const kimJiWon = {
   designation: "K POP Artist",
 };
 
-const reuseTheRingoGreet = ringo.greet.bind(kimJiWon);
-reuseTheRingoGreet("Hi to the fans!!");
+ringo.greet.apply(kimJiWon, ["Hi to the fans !!"]);
+
+const nums = [1, 2, 3, 4];
+console.log(Math.max.apply(null, nums));
